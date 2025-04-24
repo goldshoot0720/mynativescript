@@ -1,0 +1,165 @@
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+  <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+    <StackLayout row="0" class="nt-drawer__header">
+      <Label
+      class="nt-drawer__header-image fas t-36"
+      text="👤"
+    ></Label>
+      <Label class="nt-drawer__header-brand" text="草包鋒兄"></Label>
+      <Label
+        class="nt-drawer__header-footnote"
+        text="goldshoot0720@gmail.com"
+      ></Label>
+    </StackLayout>
+
+    <ScrollView row="1" class="nt-drawer__body">
+      <StackLayout>
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/main')"
+          (tap)="onNavItemTap('/main')"
+        >
+          <Label col="0" text="🏠" class="nt-icon fas"></Label>
+          <Label col="1" text="首頁" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub1')"
+          (tap)="onNavItemTap('/sub1')"
+        >
+          <Label col="0" text="🧷" class="nt-icon far"></Label>
+          <Label col="1" text="訂閱資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub2')"
+          (tap)="onNavItemTap('/sub2')"
+        >
+          <Label col="0" text="🏦" class="nt-icon fas"></Label>
+          <Label col="1" text="銀行資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub3')"
+          (tap)="onNavItemTap('/sub3')"
+        >
+          <Label col="0" text="🎯" class="nt-icon fas"></Label>
+          <Label col="1" text="錄取資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub4')"
+          (tap)="onNavItemTap('/sub4')"
+        >
+          <Label col="0" text="🎓;" class="nt-icon fas"></Label>
+          <Label col="1" text="學習資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub5')"
+          (tap)="onNavItemTap('/sub5')"
+        >
+          <Label col="0" text="🏥" class="nt-icon fas"></Label>
+          <Label col="1" text="門診處方箋資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub6')"
+          (tap)="onNavItemTap('/sub6')"
+        >
+          <Label col="0" text="💸" class="nt-icon fas"></Label>
+          <Label col="1" text="消費資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub7')"
+          (tap)="onNavItemTap('/sub7')"
+        >
+          <Label col="0" text="📅" class="nt-icon fas"></Label>
+          <Label col="1" text="日期時間資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub8')"
+          (tap)="onNavItemTap('/sub8')"
+        >
+          <Label col="0" text="💰" class="nt-icon fas"></Label>
+          <Label col="1" text="金融市場資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub9')"
+          (tap)="onNavItemTap('/sub9')"
+        >
+          <Label col="0" text="🎬" class="nt-icon fas"></Label>
+          <Label col="1" text="動畫追劇資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub10')"
+          (tap)="onNavItemTap('/sub10')"
+        >
+          <Label col="0" text="📝" class="nt-icon fas"></Label>
+          <Label col="1" text="部落格資訊管理資訊管理" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+        columns="auto, *"
+        class="nt-drawer__list-item"
+        [class.-selected]="isComponentSelected('/sub11')"
+        (tap)="onNavItemTap('/sub11')"
+      >
+        <Label col="0" text="🌍" class="nt-icon fas"></Label>
+        <Label col="1" text="大位天定資訊管理" class="p-r-10"></Label>
+      </GridLayout>
+
+      <GridLayout
+        columns="auto, *"
+        class="nt-drawer__list-item"
+        [class.-selected]="isComponentSelected('/sub12')"
+        (tap)="onNavItemTap('/sub12')"
+      >
+        <Label col="0" text="🔒" class="nt-icon fas"></Label>
+        <Label col="1" text="保留資訊管理" class="p-r-10"></Label>
+      </GridLayout>
+
+        <StackLayout class="hr"></StackLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sub0')"
+          (tap)="onNavItemTap('/sub0')"
+        >
+          <Label col="0" text="🔑" class="nt-icon fas"></Label>
+          <Label col="1" text="登入" class="p-r-10"></Label>
+        </GridLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+
+  <GridLayout tkMainContent>
+    <page-router-outlet></page-router-outlet>
+  </GridLayout>
+</RadSideDrawer>
