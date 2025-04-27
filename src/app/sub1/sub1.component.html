@@ -12,13 +12,13 @@
   <Button text="查看資料" (tap)="onViewDataButtonTap()"></Button>
 
   <StackLayout class="p-20" *ngIf="isNewData">
-    <Label text="訂閱項目:" class="h2"></Label>
+    <Label text="訂閱項目：" class="h2"></Label>
     <TextField [(ngModel)]="data3.textareavalue1"></TextField>
-    <Label text="訂閱費用:" class="h2"></Label>
+    <Label text="訂閱費用：" class="h2"></Label>
     <TextField [(ngModel)]="data3.textareavalue2"></TextField>
     <Label text="訂閱到期日：" class="h2"></Label>
     <TextField [(ngModel)]="data3.textareavalue3"></TextField>
-    <Label text="備註:" class="h2"></Label>
+    <Label text="備註：" class="h2"></Label>
     <TextView [(ngModel)]="data3.textareavalue4"></TextView>
     <Button text="新增" (tap)="onNewData3ButtonTap()"></Button>
   </StackLayout>
@@ -27,18 +27,18 @@
     <StackLayout class="p-20" *ngIf="!isNewData && isViewData">
       <StackLayout *ngFor="let item of data | keyvalue">
         <Label
-          [text]="'訂閱項目:' + item.value.textareavalue1"
+          [text]="'訂閱項目：' + item.value.textareavalue1"
           class="h2"
         ></Label>
         <Label
-          [text]="'訂閱費用:' + item.value.textareavalue2"
+          [text]="'訂閱費用：' + item.value.textareavalue2"
           class="h2"
         ></Label>
         <Label
           [text]="'訂閱到期日：' + item.value.textareavalue3"
           class="h2"
         ></Label>
-        <Label [text]="'備註:' + item.value.textareavalue4" class="h2"></Label>
+        <Label [text]="'備註：' + item.value.textareavalue4" class="h2"></Label>
       </StackLayout>
     </StackLayout>
   </ScrollView>

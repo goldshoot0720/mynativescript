@@ -7,7 +7,45 @@
   </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="🎓"></Label>
-  <Label class="page__content-placeholder" text="<!-- 🎓 content goes here -->"></Label>
-</GridLayout>
+<StackLayout class="p-20">
+  <Button text="新增資料" (tap)="onNewDataButtonTap()"></Button>
+  <Button text="查看資料" (tap)="onViewDataButtonTap()"></Button>
+
+  <StackLayout class="p-20" *ngIf="isNewData">
+    <Label text="學習項目：" class="h2"></Label>
+    <TextField [(ngModel)]="data3.textareavalue1"></TextField>
+    <Label text="學習進度：" class="h2"></Label>
+    <TextField [(ngModel)]="data3.textareavalue2"></TextField>
+    <Label text="最近學習日：" class="h2"></Label>
+    <TextField [(ngModel)]="data3.textareavalue3"></TextField>
+    <Label text="備註:" class="h2"></Label>
+    <TextView [(ngModel)]="data3.textareavalue4"></TextView>
+    <Button text="新增" (tap)="onNewData3ButtonTap()"></Button>
+  </StackLayout>
+
+  <ScrollView>
+    <StackLayout class="p-20" *ngIf="!isNewData && isViewData">
+      <StackLayout *ngFor="let item of data | keyvalue">
+        <Label
+          [text]="'學習項目：' + item.value.textareavalue1"
+          class="h2"
+        ></Label>
+        <Label
+          [text]="'學習進度：' + item.value.textareavalue2"
+          class="h2"
+        ></Label>
+        <Label
+          [text]="'最近學習日：' + item.value.textareavalue3"
+          class="h2"
+        ></Label>
+        <Label [text]="'備註:' + item.value.textareavalue4" class="h2"></Label>
+        <Label text="{{mytoFixed2(item.value.textareavalue2)}}"></Label>
+        <Label text="{{mytoMinus(item.value.textareavalue2)}}"></Label>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+
+  <StackLayout class="p-20" *ngIf="!isNewData && !isViewData">
+    <Label text="資料載入中..." class="h2"></Label>
+  </StackLayout>
+</StackLayout>
